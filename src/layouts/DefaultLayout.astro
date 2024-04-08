@@ -1,0 +1,23 @@
+---
+import "../styles/base.css";
+import Header from "../components/organisms/Header.astro";
+import Footer from "../components/organisms/Footer.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+  </head>
+  <body class="absolute inset-0 flex min-h-full flex-col">
+    <Header />
+    <slot />
+    <div class="mt-auto">
+      <Footer />
+    </div>
+  </body>
+</html>

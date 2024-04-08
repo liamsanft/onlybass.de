@@ -1,0 +1,43 @@
+<header class="fixed z-50">
+  <button
+    class="fixed right-0 z-50 m-4 rounded-md bg-white/40 px-3 py-1 text-lg font-bold text-black md:hidden"
+    >Menu</button
+  >
+  <nav
+    class="fixed inset-0 z-40 hidden h-full w-full items-center justify-center bg-black md:flex md:h-max md:bg-black/40 md:py-4 md:backdrop-blur-md"
+  >
+    <ul class="flex flex-col text-center md:flex-row">
+      <li class="mb-2 md:mb-0 md:mr-3">
+        <a
+          href="/#events"
+          class="text-3xl font-bold uppercase text-white md:text-base md:font-normal"
+          >Events</a
+        >
+      </li>
+      <li class="my-2 md:mx-3 md:my-0">
+        <a
+          href="/#artists"
+          class="text-3xl font-bold uppercase text-white md:text-base md:font-normal"
+          >Artists</a
+        >
+      </li>
+      <li class="mt-2 md:ml-3 md:mt-0">
+        <a
+          href="/#booking"
+          class="text-3xl font-bold uppercase text-white md:text-base md:font-normal"
+          >Booking</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const button = document.querySelector("button");
+  const nav = document.querySelector("nav");
+
+  button!.addEventListener("click", () => {
+    nav!.classList.toggle("hidden");
+    nav!.classList.toggle("flex");
+  });
+</script>

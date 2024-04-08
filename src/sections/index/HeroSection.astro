@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+
+import logo from "../../media/logo.svg";
+import hero from "../../media/hero.jpg";
+---
+
+<section
+  class="relative flex h-[40rem] w-full items-center justify-center overflow-hidden md:h-[45rem]"
+>
+  <Image src={logo} loading="eager" alt="Onlybass" class="z-10 w-72" />
+  <Image
+    src={hero}
+    loading="eager"
+    alt="Onlybass Party im Club Paula"
+    class="absolute inset-0 z-0 h-full w-full object-cover brightness-50"
+  />
+</section>
